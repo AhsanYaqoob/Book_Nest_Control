@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Book_Shop_Managment.BooksControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Book_Shop_Managment"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" >
+    <Grid Background="White">
+        <Label Content="Book Title" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+        <Label FontWeight="SemiBold" Content="Books Data" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BTitleTb"  HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="25" Width="150"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="180,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BautTb" HorizontalAlignment="Left" Margin="180,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="25"  Width="150"/>
+        <Label Content="Categories" HorizontalAlignment="Left" Margin="350,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.248,0.476"/>
+        <ComboBox x:Name="BCatCb" HorizontalAlignment="Left" Margin="350,90,0,0" VerticalAlignment="Top" Width="120" Height="25" />
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="490,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="QtyTb" HorizontalAlignment="Left" Margin="490,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Height="25"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="662,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PriceTb" HorizontalAlignment="Left" Margin="662,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Height="25"/>
+        <Button x:Name="Savebtn" Content="Save" HorizontalAlignment="Left" Margin="180,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="Savebtn_Click"/>
+        <Button x:Name="Editbtn" Content="Edit" HorizontalAlignment="Left" Margin="310,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="Editbtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="440,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="DeleteBtn_Click"/>
+        <Button x:Name="ResetBtn" Content="Reset" HorizontalAlignment="Left" Margin="573,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="ResetBtn_Click"/>
+        <DataGrid x:Name="datagridview" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,300,0,0"  CanUserResizeColumns="False" SelectionChanged="datagridview_SelectionChanged"  >
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="IsEditing" Value="True"/>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <Label Content="Book List" HorizontalAlignment="Center" Margin="0,221,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CatCbSearchCb" Text="Filter by Category" HorizontalAlignment="Center" Margin="0,248,0,0" VerticalAlignment="Top" Width="170" Height="25" SelectionChanged="CatCbSearchCb_SelectionChanged"/>
+        <Button x:Name="RefreshBtn" Background="Green" Content="Refresh" HorizontalAlignment="Left" Margin="542,231,0,0" VerticalAlignment="Top" Height="42" Width="98" Click="RefreshBtn_Click"/>
+
+    </Grid>
+</UserControl>

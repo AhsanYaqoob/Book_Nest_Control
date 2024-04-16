@@ -1,0 +1,51 @@
+﻿<Window x:Class="Book_Shop_Managment.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Book_Shop_Managment"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="DarkGreen"
+        ResizeMode="NoResize"
+     
+        WindowStyle="None"
+        
+        Title="Login" Height="450" Width="800">
+    <Grid Margin="15" Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="550"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" >
+            <Label FontSize="21" FontWeight="Bold" Content="Nice Staff" HorizontalAlignment="Left" Margin="44,99,0,0" VerticalAlignment="Top" />
+            <Label  FontSize="23" FontWeight="Bold"  Content="Diverse Collection" HorizontalAlignment="Left" Margin="44,155,0,0" VerticalAlignment="Top"/>
+            <Label FontSize="21" FontWeight="Bold"  Content="Superior Service" HorizontalAlignment="Left" Margin="44,210,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Grid.Column="1" Background="White" >
+            <Label   Content="BookShop Management System" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Black"/>
+            <Label FontSize="20" Content="UserName" HorizontalAlignment="Left" Margin="45,177,0,0" VerticalAlignment="Top"/>
+            <Label FontSize="20" Content="Password" HorizontalAlignment="Left" Margin="45,243,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="UnameTb" FontSize="25" HorizontalAlignment="Left" Margin="175,177,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="35" Width="260" TextChanged="UnameTb_TextChanged"/>
+            <PasswordBox PasswordChar="*" FontSize="25" x:Name="UPassTb" HorizontalAlignment="Left" Margin="175,244,0,0"  VerticalAlignment="Top" Height="35" Width="260" />
+            <Button  x:Name="loginbtn" FontSize="25" FontWeight="ExtraLight" Background="LightGray"  Content="Login" HorizontalAlignment="Left" Margin="235,301,0,0" VerticalAlignment="Top" Width="140" Height="40" Click="loginbtn_Click"  BorderBrush="green">
+                <Button.Effect>
+                    <DropShadowEffect Color="LightGreen" Direction="270" ShadowDepth="7" Opacity="0.8" />
+                </Button.Effect>
+            </Button>
+            <Button Background="Transparent"   HorizontalAlignment="Left" Margin="280,372,0,0" VerticalAlignment="Top" Width="50" Height="20" BorderBrush="LightGreen" Click="Button_Click">
+                <TextBlock Text="Admin" TextDecorations="Underline"/>
+                <Button.Effect>
+                    <DropShadowEffect Color="Black" Direction="270" ShadowDepth="3" Opacity="0.8"/>
+                </Button.Effect>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="100" Margin="255,62,0,0" VerticalAlignment="Top" Width="100">
+                <Image.Source>images/book.png</Image.Source>
+            </Image>
+
+
+
+
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Book_Shop_Managment.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Book_Shop_Managment"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="White">
+
+        <Label Content="User Name" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top"/>
+        <Label FontWeight="SemiBold" Content="User Data" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UserName" HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="25" Width="150"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="203,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneTb" HorizontalAlignment="Left" Margin="203,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="25"  Width="150"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="426,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AddTb" HorizontalAlignment="Left" Margin="426,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Height="25"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="640,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PassTb" HorizontalAlignment="Left" Margin="640,90,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150" Height="25"/>
+        <Button x:Name="SaveBtn" Content="Save" HorizontalAlignment="Left" Margin="180,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="SaveBtn_Click"/>
+        <Button x:Name="EditBtn" Content="Edit" HorizontalAlignment="Left" Margin="310,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="EditBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="440,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="DeleteBtn_Click"/>
+        <Button x:Name="ResetBtn" Content="Reset" HorizontalAlignment="Left" Margin="573,148,0,0" VerticalAlignment="Top" Height="42" Width="98" Style="{StaticResource btncolor}" Click="ResetBtn_Click"/>
+        <DataGrid x:Name="datagridview" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,264,0,0" SelectionChanged="datagridview_SelectionChanged" >
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="IsEditing" Value="True"/>
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <Label FontSize="25" Foreground="DarkSeaGreen" Content="User List" HorizontalAlignment="Center" Margin="0,221,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</UserControl>

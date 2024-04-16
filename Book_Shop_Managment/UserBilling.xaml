@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Book_Shop_Managment.UserBilling"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Book_Shop_Managment"
+             mc:Ignorable="d" 
+             d:DesignHeight="588" d:DesignWidth="855" Loaded="UserControl_Loaded">
+    <Grid Background="White">
+        <Label Content="Book Name" HorizontalAlignment="Left" Margin="9,58,0,0" VerticalAlignment="Top"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="150,58,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="BTitleTb"  HorizontalAlignment="Left" Margin="9,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25" IsEnabled="False"/>
+        <TextBox x:Name="QtyTb"  HorizontalAlignment="Left" Margin="150,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="25" />
+        <Label Content="Client Name" HorizontalAlignment="Left" Margin="9,125,0,0" VerticalAlignment="Top"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="150,125,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ClientNameTb" HorizontalAlignment="Left" Margin="9,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="25"/>
+        <TextBox x:Name="PriceTb" HorizontalAlignment="Left" Margin="150,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="25" IsEnabled="False"/>
+        <Label FontSize="20" Foreground="ForestGreen" Content="Book List" HorizontalAlignment="Left" Margin="129,267,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Addbtn" Foreground="White" Background="Green" Content="Add To Bill" HorizontalAlignment="Left" Margin="19,196,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Addbtn_Click"/>
+        <Button  x:Name="Resetbtn" Foreground="White" Background="Green" Content="Reset" HorizontalAlignment="Left" Margin="150,196,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Resetbtn_Click"/>
+        <DataGrid x:Name="Billdatagridview" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="352,72,60,250"  CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" AutoGenerateColumns="True" HorizontalContentAlignment="Stretch" >
+            <!-- <DataGrid.Columns>
+    <DataGridTextColumn Header="Id" />
+    <DataGridTextColumn Header="Books" />
+    <DataGridTextColumn Header="Price" />
+    <DataGridTextColumn Header="Quantity"/>
+    <DataGridTextColumn Header="Total"/>
+</DataGrid.Columns> -->
+
+        </DataGrid>
+        <Label FontSize="35" FontWeight="Medium" Content="Billing" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Printbtn" Background="Green" Content="Print" HorizontalAlignment="Left" Margin="547,416,0,0" VerticalAlignment="Top" Width="100" Height="25" Click="Printbtn_Click"/>
+        <DataGrid x:Name="BookListDGV" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,343,427,10" SelectionChanged="BookListDGV_SelectionChanged"  CanUserResizeColumns="False" CanUserResizeRows="False" HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch" AutoGenerateColumns="True" HorizontalContentAlignment="Stretch"/>
+        <Label Content="Bill" FontWeight="Black" HorizontalAlignment="Left" Margin="584,47,0,0" VerticalAlignment="Top" />
+        <Label x:Name="TotalLbl"  HorizontalAlignment="Left" Margin="597,384,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="UserName" Content="UserName" HorizontalAlignment="Left" Margin="58,21,0,0" VerticalAlignment="Top" />
+        <Label Content="Total" HorizontalAlignment="Left" Margin="547,384,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CatCbSearchCb" HorizontalAlignment="Left" Margin="19,315,0,0" VerticalAlignment="Top" Width="150" BorderBrush="Green" SelectionChanged="CatCbSearchCb_SelectionChanged"/>
+        <Button x:Name="RefreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="188,313,0,0" VerticalAlignment="Top" Width="100" Height="25" Background="LightGreen" BorderBrush="Green" Click="RefreshBtn_Click"/>
+        <Image HorizontalAlignment="Left" Height="43" Margin="10,10,0,0" VerticalAlignment="Top" Width="44" Source="/images/account.png"/>
+    </Grid>
+</UserControl>
